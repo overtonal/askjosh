@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Test Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pure JS Test</h1>
+  <p>If JavaScript is running, clicking the button will increase the number below:</p>
+
+  <h2 id="counter">0</h2>
+  <button id="btn">Click Me</button>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById('counter');
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', () => {
+      count++;
+      counter.textContent = count;
+    });
+  </script>
+</body>
+</html>
